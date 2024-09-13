@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link" href="{{ route('home') }}">Treni</a>
-                <a class="nav-link" href="{{ route('about') }}">Vacanze</a>
+                <a class="nav-link" href="{{ route('travel') }}">Vacanze</a>
                 <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
             </div>
         </div>

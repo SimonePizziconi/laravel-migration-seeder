@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Train;
+use App\Models\TravelPackage;
 
 use Illuminate\Support\Carbon;
 
@@ -20,9 +21,12 @@ class PageController extends Controller
 
         return view('home', compact('trains'));
     }
-    public function about()
+    public function travel()
     {
-        return view('about');
+        $travel = TravelPackage::whereYear('departure_date', '=', 2024)->get();
+
+
+        return view('travel', compact('travel'));
     }
     public function contacts()
     {
