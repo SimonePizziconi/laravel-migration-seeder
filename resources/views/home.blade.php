@@ -31,8 +31,8 @@
                     <td>{{ $train->arrival_time }}</td>
                     <td>{{ $train->train_code }}</td>
                     <td>{{ $train->number_of_carriages }}</td>
-                    <td>{{ $train->on_time }}</td>
-                    <td>{{ $train->cancelled }}</td>
+                    <td>{!! $train->getOnTime() !!}</td>
+                    <td>{!! $train->getCancelled() !!}</td>
                 </tr>
             @endforeach
         </tbody>
