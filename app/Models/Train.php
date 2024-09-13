@@ -9,9 +9,9 @@ class Train extends Model
 {
     use HasFactory;
 
-    public function getDepartureDateAttribute()
+    public function getDepartureDateAttribute($value)
     {
-        return date('d/m/Y');
+        return date('d/m/Y', strtotime($value));
     }
 
     public function getOnTime()
