@@ -18,4 +18,13 @@ class TravelPackage extends Model
     {
         return date('d/m/Y', strtotime($value));
     }
+
+    public function getIsIncludedFlight()
+    {
+        if ($this->is_included_flight) {
+            return '<i class="fa-solid fa-plane"></i>';
+        } else {
+            return '<i class="fa-solid fa-plane-slash"></i>';
+        }
+    }
 }

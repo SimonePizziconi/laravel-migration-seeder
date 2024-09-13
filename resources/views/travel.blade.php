@@ -26,7 +26,7 @@
                         <td>{{ $travel->departure_date }}</td>
                         <td>{{ $travel->return_date }}</td>
                         <td>{{ $travel->available_seats }}</td>
-                        <td>{{ $travel->is_included_flight }}</td>
+                        <td>{!! $travel->getIsIncludedFlight() !!}</td>
                     </tr>
                 @endforeach
             </tbody>

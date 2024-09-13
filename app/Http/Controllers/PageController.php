@@ -23,7 +23,7 @@ class PageController extends Controller
     }
     public function travel()
     {
-        $travel = TravelPackage::whereYear('departure_date', '=', 2024)->get();
+        $travel = TravelPackage::whereYear('departure_date', '=', 2024)->orderBy('departure_date', 'asc')->get();
 
 
         return view('travel', compact('travel'));
